@@ -1,2 +1,2 @@
-# Dream-Kitchen | Front-End (Next JS)
-Front-End part of Web App.
+# Dream-Kitchen | Back-End (Strapi)
+Back-End part of Web App.
