@@ -1,0 +1,40 @@
+{
+  "short_name": "Dream Kitchen",
+  "name": "Dream Kitchen",
+  "lang": "en",
+  "description": "We are engaged in the creation and installation of luxurious kitchens that will fit perfectly into your interior and will be as practical as possible.",
+  "start_url": "/",
+  "scope": "/",
+  "background_color": "#FFF",
+  "theme_color": "#373EF1",
+  "dir": "ltr",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "app-icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "app-icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    },
+    {
+      "src": "app-icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "app-icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    }
+  ],
+  "prefer_related_applications": false
+}

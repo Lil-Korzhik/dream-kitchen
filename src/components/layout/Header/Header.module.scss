@@ -1,0 +1,61 @@
+/* ---- Header ---- */
+@import '@resources';
+
+.wrapper {
+    width: 100%;
+    padding: $header-padding-desktop-gutter 0;
+
+    @include mq($tablet) {
+        padding: $header-padding-tablet-gutter 0;
+    }
+
+    @include mq($phablet) {
+        padding: $header-padding-phablet-gutter 0;
+    }
+}
+
+.wrapper_sticky {
+    position: fixed;
+    background: linear-gradient(180deg, rgba(17, 17, 17, 0.1) 0%, rgba(17, 17, 17, 0) 100%);
+}
+
+.logo {
+    @include transition();
+    @include font-size(28px);
+    font-weight: 500;
+
+    &:hover {
+        @include link-hover();
+    }
+
+    @include mq($phone) {
+        @include font-size(24px);
+    }
+}
+
+.navigation {
+    @include flexible();
+    justify-content: space-between;
+}
+
+.right {
+    @include flexible();
+    
+    @include mq($tablet-large) {
+        flex-direction: row-reverse;
+    }
+}
+
+.button {
+    @include font-size(18px);
+    width: rem(180);
+    margin-left: 30px;
+
+    @include mq($tablet-large) {
+        margin-left: 0;
+    }
+
+    @include mq($phone) {
+        width: rem(100);
+    }
+}

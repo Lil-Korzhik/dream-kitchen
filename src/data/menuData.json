@@ -1,0 +1,54 @@
+{
+    "header": [
+        {
+            "text": "What we offer",
+            "href": "#what-we-offer"
+        },
+        {
+            "text": "Work",
+            "href": "#work"
+        },
+        {
+            "text": "Features",
+            "href": "#features"
+        },
+        {
+            "text": "Reviews",
+            "href": "#reviews"
+        },
+        {
+            "text": "Contacts",
+            "href": "#contacts"
+        },
+        {
+            "text": "FAQ",
+            "href": "#faq"
+        }
+    ],
+    "footer": [
+        {
+            "text": "What we offer",
+            "href": "#what-we-offer"
+        },
+        {
+            "text": "Features",
+            "href": "#features"
+        },
+        {
+            "text": "What client receive",
+            "href": "#what-client-receive"
+        },
+        {
+            "text": "Guarantees",
+            "href": "#guarantees"
+        },
+        {
+            "text": "Reviews",
+            "href": "#reviews"
+        },
+        {
+            "text": "FAQ",
+            "href": "#faq"
+        }
+    ]
+}

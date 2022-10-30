@@ -1,0 +1,159 @@
+/* ---- Mixins ---- */
+@use 'sass:math';
+
+/* -- Transition -- */
+@mixin transition($delay: $transition-delay) {
+    transition: $transition-property $delay $transition-timing;
+}
+
+/* -- Link Hover -- */
+@mixin link-hover($opacity: $link-hover-opacity) {
+    opacity: $opacity;
+    @include transition();
+}
+
+/* -- Fade -- */
+@mixin fade($status) {
+    @if $status == in {
+        opacity: 1;
+        pointer-events: visible;
+    }
+
+    @if $status == out {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    @include transition();
+}
+
+/* -- Background -- */
+@mixin background($url) {
+    background: url($url) no-repeat center top / cover;
+}
+
+/* -- Background Opacity -- */
+@mixin background-opacity($color, $opacity) {
+    background: $color;
+    background: rgba($color, $opacity);
+}
+
+/* -- Selection -- */
+@mixin selection {
+    background: none;
+	color: $theme-color;
+	text-shadow: none;
+}
+
+/* -- Flexible -- */
+@mixin flexible {
+    display: flex;
+    align-items: center;
+}
+
+/* -- Full Stretch -- */
+@mixin full-stretch {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* -- Center Element -- */
+@mixin center-element {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* -- Center All Content -- */
+@mixin center-all-content {
+	@include full-stretch();
+	@include flexible();
+	justify-content: center;
+	text-align: center;
+}
+
+/* -- Reset Indents -- */
+@mixin reset-indents {
+    margin: 0;
+    padding: 0;
+}
+
+/* -- Media Queries -- */
+@mixin mq($size: "480" , $type: "<", $size-next: null) {
+	@if ($type == ">") {
+		@media (min-width: #{$size}px) {
+			@content;
+		}
+	}
+
+	@if ($type == "<") {
+		@media (max-width: #{$size}px) {
+			@content;
+		}
+	}
+
+	@if ($type == "<>") {
+		@media screen and (min-width: #{$size}px) and (max-width: #{$size-next}px) {
+			@content;
+		}
+	}
+}
+
+@mixin font($font-name, $file-name, $weight, $style) {
+	@font-face {
+		font-family: $font-name;
+		font-display: swap;
+		src: url("../fonts/#{$file-name}.woff2") format("woff2"), url("../fonts/#{$file-name}.woff") format("woff");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+/* -- Responsive Container -- */
+@mixin responsive-container() {
+	$container-gutter: percent($container-desktop-gutter, $desktop);
+	padding-left: $container-gutter;
+    padding-right: $container-gutter;
+	width: 100%;
+
+    @include mq($laptop) {
+        $container-gutter: percent($container-laptop-gutter, $laptop);
+		padding-left: $container-gutter;
+    	padding-right: $container-gutter;
+    }
+    
+    @include mq($tablet-large) {
+        $container-gutter: percent($container-tablet-large-gutter, $tablet-large);
+		padding-left: $container-gutter;
+    	padding-right: $container-gutter;
+    }
+
+	@include mq($tablet) {
+        $container-gutter: percent($container-tablet-gutter, $tablet);
+		padding-left: $container-gutter;
+    	padding-right: $container-gutter;
+    }
+
+	@include mq($phablet) {
+        $container-gutter: percent($container-phablet-gutter, $phablet);
+		padding-left: $container-gutter;
+    	padding-right: $container-gutter;
+    }
+}
+
+/* -- Menu Top Calculate -- */
+@mixin menu-top-calc() {
+	top: calc($header-padding-desktop-gutter + 52px + $header-padding-desktop-gutter);
+
+    @include mq($tablet) {
+        top: calc($header-padding-tablet-gutter + 52px + $header-padding-tablet-gutter);
+    }
+
+    @include mq($phablet) {
+        top: calc($header-padding-phablet-gutter + 52px + $header-padding-phablet-gutter);
+    }
+}

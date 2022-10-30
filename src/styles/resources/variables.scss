@@ -1,0 +1,54 @@
+/* ---- Variables ---- */
+/* -- Colors -- */
+$white-1: #fff;
+
+$black-1: #111;
+$black-2: #282828;
+
+$theme-color: #373EF1;
+$background-color: $white-1;
+
+/* -- Buttons -- */
+$theme-btn-bg-hover: #5F65F4;
+$theme-btn-bg-active: #2C32C1;
+$theme-btn-color-hover: $white-1;
+$theme-btn-color-active: $white-1;
+
+$theme-ghost-btn-color-hover: $white-1;
+$theme-ghost-btn-bg-active: $white-1;
+
+/* -- Typography -- */
+$font-family: 'Jost', sans-serif;
+$font-weight: 400;
+$font-size: 20px;
+$font-color: $black-1;
+
+/* -- Transition -- */
+$transition-property: all;
+$transition-delay: 0.2s;
+$transition-timing: ease; 
+
+/* -- Link -- */
+$link-hover-opacity: 0.7;
+
+/* -- Media Query Breakpoints -- */
+$phone: 480;
+$phablet: 576;
+$tablet: 768;
+$tablet-large: 992;
+$laptop: 1200;
+$desktop: 1400;
+
+/* -- Container -- */
+$container-desktop-gutter: 105;
+$container-laptop-gutter: 62;
+$container-tablet-large-gutter: 52;
+$container-tablet-gutter: 32;
+$container-phablet-gutter: 24;
+
+/* -- Gutters -- */
+$header-padding-desktop-gutter: 33px;
+$header-padding-tablet-gutter: 24px;
+$header-padding-phablet-gutter: 20px;
+
+$section-gutter: 100px;
