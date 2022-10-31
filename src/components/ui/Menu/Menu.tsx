@@ -24,8 +24,8 @@ const Menu: FC<Props> = ({place}) => {
     return (
         <div>
             <ul className={styles[`list_` + place]} ref={listRef}>
-                {list.map(({text, href}, index) => (
-                    <MenuItem text={text} href={href} key={index} />
+                {list.map(({text, href, type}, index) => (
+                    <MenuItem text={text} href={href} type={type} key={index} />
                 ))}
             </ul>
 

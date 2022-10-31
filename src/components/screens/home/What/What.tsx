@@ -10,7 +10,7 @@ const What = () => {
     const list: IWhatItem[] = whatData.list;
 
     return (
-        <section className={styles.section} id="section-what">
+        <section className={styles.section} id="what-we-offer">
             <div className="container">
                 <h2 className={styles.section_title}>{whatData.sectionTitle}</h2>
                 <ul className={styles.list}>

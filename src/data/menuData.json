@@ -2,53 +2,65 @@
     "header": [
         {
             "text": "What we offer",
-            "href": "#what-we-offer"
+            "href": "#what-we-offer",
+            "type": "anchor"
         },
         {
             "text": "Work",
-            "href": "#work"
+            "href": "#work",
+            "type": "anchor"
         },
         {
             "text": "Features",
-            "href": "#features"
+            "href": "#features",
+            "type": "anchor"
         },
         {
             "text": "Reviews",
-            "href": "#reviews"
+            "href": "#reviews",
+            "type": "anchor"
         },
         {
             "text": "Contacts",
-            "href": "#contacts"
+            "href": "#contacts",
+            "type": "anchor"
         },
         {
             "text": "FAQ",
-            "href": "#faq"
+            "href": "#faq",
+            "type": "anchor"
         }
     ],
     "footer": [
         {
             "text": "What we offer",
-            "href": "#what-we-offer"
+            "href": "#what-we-offer",
+            "type": "anchor"
         },
         {
             "text": "Features",
-            "href": "#features"
+            "href": "#features",
+            "type": "anchor"
         },
         {
             "text": "What client receive",
-            "href": "#what-client-receive"
+            "href": "#what-client-receive",
+            "type": "anchor"
         },
         {
             "text": "Guarantees",
-            "href": "#guarantees"
+            "href": "#guarantees",
+            "type": "anchor"
         },
         {
             "text": "Reviews",
-            "href": "#reviews"
+            "href": "#reviews",
+            "type": "anchor"
         },
         {
             "text": "FAQ",
-            "href": "#faq"
+            "href": "#faq",
+            "type": "anchor"
         }
     ]
 }
