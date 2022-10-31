@@ -9,7 +9,7 @@ const WhatItem: FC<IWhatItem> = ({imgUrl, title, description}) => {
     return (
         <li className={styles.item}>
             <div className={styles.image}>
-                <Image src={imgUrl} blurDataURL={imgUrl} layout="fill" placeholder="blur" />
+                <Image src={imgUrl} blurDataURL={imgUrl} layout="fill" placeholder="blur" alt={title} />
             </div>
 
             <h4 className={styles.title}>{title}</h4>
