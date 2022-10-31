@@ -4,10 +4,17 @@ import { IMenuItem } from '@shared/interfaces/IMenuItem';
 
 import styles from './Menu.module.scss';
 
-const MenuItem: FC<IMenuItem> = ({text, href, type}) => {
+interface Props extends IMenuItem {
+    toggleMenu: () => void;
+}
+
+const MenuItem: FC<Props> = ({text, href, type, toggleMenu}) => {
     const anchorHandleClick = (e: MouseEvent<HTMLAnchorElement>) => {
         const anchor = document.querySelector(href);
+
+        if(window.screen.width < 993) toggleMenu();
         anchor?.scrollIntoView({behavior: 'smooth'});
+
         e.preventDefault();
     }
     
