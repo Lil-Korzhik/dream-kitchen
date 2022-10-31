@@ -23,6 +23,8 @@ $font-weight: 400;
 $font-size: 20px;
 $font-color: $black-1;
 
+$h1-font-size: 54px;
+
 /* -- Transition -- */
 $transition-property: all;
 $transition-delay: 0.2s;
@@ -40,8 +42,8 @@ $laptop: 1200;
 $desktop: 1400;
 
 /* -- Container -- */
-$container-desktop-gutter: 105;
-$container-laptop-gutter: 62;
+$container-desktop-gutter: 170;
+$container-laptop-gutter: 80;
 $container-tablet-large-gutter: 52;
 $container-tablet-gutter: 32;
 $container-phablet-gutter: 24;
