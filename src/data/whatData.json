@@ -1,0 +1,20 @@
+{
+    "sectionTitle": "What we offer",
+    "list": [
+        {
+            "imgUrl": "/img/home/what/wooden-kitchens.jpg",
+            "title": "Wooden kitchens",
+            "description": "We will develop the design of your kitchen, make it a reality, and then we will come and install"
+        },
+        {
+            "imgUrl": "/img/home/what/kitchen-installation.jpg",
+            "title": "Kitchen installation",
+            "description": "We will repaint or immediately make a kitchen of any complexity so that it fits into the design"
+        },
+        {
+            "imgUrl": "/img/home/what/wooden-doors.jpg",
+            "title": "Wooden doors",
+            "description": "Also, we order complete with a kitchen - wooden doors that emphasize and fit into the interior"
+        }
+    ]
+}

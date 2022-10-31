@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 import Offer from '@components/screens/home/Offer/Offer';
+import What from '@components/screens/home/What/What';
 
 const Home: NextPage = () => {
   return (
@@ -12,6 +13,7 @@ const Home: NextPage = () => {
       </Head>
 
       <Offer />
+      <What />
     </div>
   )
 }

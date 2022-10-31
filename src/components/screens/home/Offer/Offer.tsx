@@ -8,7 +8,7 @@ import styles from './Offer.module.scss';
 
 const Offer: FC = () => {
     return (
-        <section className={styles.section} id="offer">
+        <section className={styles.section} id="section-offer">
             <div className="container">
                 <div className={styles.wrapper}>
                     <OfferContent />

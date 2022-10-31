@@ -14,12 +14,20 @@ body {
     color: $font-color;
 }
 
+section {
+    padding-bottom: $section-gutter;
+}
+
 h1, h2, h3, h4, h5, h6 {
     @include reset-indents();
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
     font-weight: 600;
+}
+
+h4, h5, h6 {
+    font-weight: 500;
 }
 
 h1 {
@@ -29,6 +37,18 @@ h1 {
     @include mq($tablet-large) {
         @include font-size(42px)
     }
+}
+
+h2 {
+    @include font-size($h2-font-size);
+}
+
+h3 {
+    @include font-size($h3-font-size);
+}
+
+h4 {
+    @include font-size($h4-font-size);
 }
 
 p {
@@ -45,6 +65,10 @@ a {
 ul, li {
     @include reset-indents();
     display: block;
+}
+
+img {
+    object-fit: cover;
 }
 
 input,
