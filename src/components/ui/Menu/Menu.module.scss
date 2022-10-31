@@ -99,15 +99,37 @@
 
 .open_btn {
     @include transition();
-    @include background('/img/layout/header/open-menu.svg');
+    position: relative;
     width: 32px;
     height: 32px;
     margin-left: 30px;
     display: none;
+    background: none;
     cursor: pointer;
     
     &:hover {
         @include link-hover();
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    &:before {
+        @include background('/img/layout/header/open-menu.svg');
+        @include fade(in);
+    }
+
+    &:after {
+        @include background('/img/layout/header/close-menu.svg');
+        @include fade(out);
     }
 
     @include mq($tablet-large) {
@@ -121,5 +143,12 @@
 
 .close_btn {
     @include transition();
-    @include background('/img/layout/header/close-menu.svg');
+
+    &:before {
+        @include fade(out);
+    }
+    
+    &:after {
+        @include fade(in);
+    }
 }
