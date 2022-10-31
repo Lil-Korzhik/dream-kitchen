@@ -1,4 +1,4 @@
-import { FC, MouseEvent, useRef } from 'react';
+import { FC, useState } from 'react';
 import Link from 'next/link';
 
 import MenuItem from './MenuItem';
@@ -12,33 +12,32 @@ type Props = {
 }
 
 const Menu: FC<Props> = ({place}) => {
+    const [isOpen, setIsOpen] = useState<boolean>(false);
     const list: IMenuItem[] = menuData[place];
-    
-    const listRef = useRef<HTMLUListElement | null>(null);
-    const toggleButtonRef = useRef<HTMLButtonElement | null>(null);
 
     const toggleMenu = () => {
         document.body.classList.toggle('lock-scroll');
-        listRef.current?.classList.toggle(styles.show);
-        toggleButtonRef.current?.classList.toggle(styles.close_btn);
+        setIsOpen(!isOpen);
     }
 
     return (
         <div>
-            <ul className={styles[`list_` + place]} ref={listRef}>
+            <ul className={`${styles[`list_` + place]} ${isOpen ? styles.show : ''}`}>
                 {list.map(({text, href, type}, index) => (
-                    <MenuItem text={text} href={href} type={type} toggleMenu={toggleMenu} key={index} />
+                    <MenuItem text={text} 
+                              href={href} 
+                              type={type} 
+                              toggleMenu={toggleMenu} 
+                              key={index} />
                 ))}
             </ul>
 
-            {place === 'header' ? 
+            {place === 'header' &&
             <button type="button" 
                     aria-label="Toggle Menu" 
-                    className={styles.open_btn} 
-                    onClick={toggleMenu}
-                    ref={toggleButtonRef}>
-            </button> 
-            : true}
+                    className={`${styles.open_btn} ${isOpen ? styles.close_btn : ''}`} 
+                    onClick={toggleMenu}>
+            </button>}
         </div>
     );
 }

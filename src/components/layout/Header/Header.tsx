@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, RefObject, useEffect, useState } from 'react';
 import Link from 'next/link';
 
 import Menu from '@components/ui/Menu/Menu';
@@ -7,9 +7,14 @@ import useWindowSize from '@hooks/useWindowSize';
 
 import styles from './Header.module.scss';
 
-const Header: FC = () => {
-    const windowSize = useWindowSize();
+type Props = {
+    isSticky: boolean,
+    headerRef: RefObject<HTMLElement>
+}
+
+const Header: FC<Props> = ({isSticky, headerRef}) => {
     const [buttonText, setButtonText] = useState<string>('Discuss the kitchen');
+    const windowSize = useWindowSize();
 
     useEffect(() => {
         if(windowSize.width > 478) {
@@ -20,7 +25,7 @@ const Header: FC = () => {
     }, [windowSize]);
 
     return (
-        <header className={styles.wrapper} id="header">
+        <header className={`${styles.wrapper} ${isSticky ? styles.sticky : ''}`} id="header" ref={headerRef}>
             <div className="container">
                 <nav className={styles.navigation}>
                     <Link href='/'>
