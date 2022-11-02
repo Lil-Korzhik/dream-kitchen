@@ -1,7 +1,8 @@
-export interface IOfferContent {
-    title: string;
-    colorTitle: string;
+import IOfferTitle from './IOfferTitle';
+import IOfferButton from './IOfferButton';
+
+export default interface IOfferContent {
+    title: IOfferTitle;
     description: string;
-    buttonText: string;
-    buttonAnchor: string;
+    button: IOfferButton;
 }

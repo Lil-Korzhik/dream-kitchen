@@ -1,0 +1,40 @@
+{
+    "sectionTitle": "Kitchens we've done",
+    "button": {
+        "text": "All cases",
+        "link": "#"
+    },
+    "image": {
+        "url": "/img/home/cases/",
+        "alt": "Kitchen Case"
+    },
+    "images": {
+        "rows": 5,
+        "items": [
+            {"name": "img-1.jpg", "row": 1},
+            {"name": "img-2.jpg", "row": 1},
+            {"name": "img-3.jpg", "row": 1},
+            {"name": "img-4.jpg", "row": 1},
+    
+            {"name": "img-5.jpg", "row": 2},
+            {"name": "img-6.jpg", "row": 2},
+            {"name": "img-7.jpg", "row": 2},
+            {"name": "img-8.jpg", "row": 2},
+    
+            {"name": "img-9.jpg", "row": 3},
+            {"name": "img-10.jpg", "row": 3},
+            {"name": "img-11.jpg", "row": 3},
+            {"name": "img-12.jpg", "row": 3},
+    
+            {"name": "img-12.jpg", "row": 4},
+            {"name": "img-13.jpg", "row": 4},
+            {"name": "img-14.jpg", "row": 4},
+            {"name": "img-15.jpg", "row": 4},
+    
+            {"name": "img-1.jpg", "row": 5},
+            {"name": "img-2.jpg", "row": 5},
+            {"name": "img-3.jpg", "row": 5},
+            {"name": "img-4.jpg", "row": 5}
+        ]
+    }
+}

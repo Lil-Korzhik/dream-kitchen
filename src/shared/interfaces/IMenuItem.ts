@@ -1,6 +1,4 @@
-import { MouseEvent } from 'react';
-
-export interface IMenuItem {
+export default interface IMenuItem {
     text: string;
     href: string;
     type: string;

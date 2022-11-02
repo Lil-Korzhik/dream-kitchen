@@ -1,9 +1,10 @@
 import { FC } from 'react';
 
 import WhatItem from './WhatItem';
-import { IWhatItem } from '@shared/interfaces/IWhatItem';
+import IWhatItem from '@shared/interfaces/IWhatItem';
 
-import whatData from '@data/whatData.json';
+import whatData from '@data/what.json';
+
 import styles from './What.module.scss';
 
 const What = () => { 

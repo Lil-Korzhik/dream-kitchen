@@ -1,6 +1,7 @@
 import { FC, MouseEvent } from 'react';
 import Link from 'next/link';
-import { IMenuItem } from '@shared/interfaces/IMenuItem';
+
+import IMenuItem from '@shared/interfaces/IMenuItem';
 
 import styles from './Menu.module.scss';
 

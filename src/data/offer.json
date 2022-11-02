@@ -1,0 +1,53 @@
+{
+    "content": {
+        "title": {
+            "text": "Create the kitchen",
+            "dedicated": "of your dreams" 
+        },
+        "description": "We are engaged in the creation and installation of luxurious kitchens that will fit perfectly into your interior and will be as practical as possible.",
+        "button": {
+            "text": "Discuss the kitchen",
+            "anchor": "#consultation"
+        }
+    },
+    "images": {
+        "columns": 2,
+        "items": [
+            {
+                "url": "/img/home/offer/img-1.jpg",
+                "width": 305,
+                "height": 350,
+                "alt": "Kitchen 1",
+                "column": 1
+            },
+            {
+                "url": "/img/home/offer/img-2.jpg",
+                "width": 200,
+                "height": 102,
+                "alt": "Kitchen 2",
+                "column": 1
+            },
+            {
+                "url": "/img/home/offer/img-3.jpg",
+                "width": 390,
+                "height": 210,
+                "alt": "Kitchen 3",
+                "column": 2
+            },
+            {
+                "url": "/img/home/offer/img-4.jpg",
+                "width": 285,
+                "height": 110,
+                "alt": "Kitchen 4",
+                "column": 2
+            },
+            {
+                "url": "/img/home/offer/img-5.jpg",
+                "width": 390,
+                "height": 164,
+                "alt": "Kitchen 5",
+                "column": 2
+            }
+        ]
+    }
+}

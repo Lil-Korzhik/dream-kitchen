@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import Image from 'next/image';
 
-import { IWhatItem } from '@shared/interfaces/IWhatItem';
+import IWhatItem from '@shared/interfaces/IWhatItem';
 
 import styles from './What.module.scss';
 
@@ -9,7 +9,7 @@ const WhatItem: FC<IWhatItem> = ({imgUrl, title, description}) => {
     return (
         <li className={styles.item}>
             <div className={styles.image}>
-                <Image src={imgUrl} blurDataURL={imgUrl} layout="fill" placeholder="blur" alt={title} />
+                <Image src={imgUrl} blurDataURL={imgUrl} alt={title} layout="fill" placeholder="blur" />
             </div>
 
             <h4 className={styles.title}>{title}</h4>

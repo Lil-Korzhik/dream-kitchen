@@ -40,8 +40,8 @@
 
 /* -- Selection -- */
 @mixin selection {
-    background: none;
-	color: $theme-color;
+    @include background-opacity($theme-color, 0.7);
+	color: $white-1;
 	text-shadow: none;
 }
 
@@ -114,31 +114,31 @@
 }
 
 /* -- Create Gutter -- */
-@mixin create-gutter($gutter, $screen-width: 'default') {
+@mixin create-gutter($screen-width, $gutter: '') {
 	@if($screen-width == 'default') {
-		$percent-gutter: percent($gutter, $desktop);
-		padding-left: $percent-gutter;
-		padding-right: $percent-gutter;
+		width: 1350px;
+		margin: 0 auto;
 	} @else {
 		@include mq($screen-width) {
 			$percent-gutter: percent($gutter, $screen-width);
 			padding-left: $percent-gutter;
 			padding-right: $percent-gutter;
+			width: 100%;
+			margin: 0;
 		}
 	}
 }
 
 /* -- Responsive Container -- */
 @mixin responsive-container() {
-	@include create-gutter($container-desktop-gutter);
-	width: 100%;
-
-	@include create-gutter($container-desktop-gutter - 45, 1300);
-	@include create-gutter($container-laptop-gutter, $laptop);
-	@include create-gutter($container-laptop-gutter - 25, 1100);
-	@include create-gutter($container-tablet-large-gutter, $tablet-large);
-	@include create-gutter($container-tablet-gutter, $tablet);
-	@include create-gutter($container-phablet-gutter, $phablet);
+	@include create-gutter('default');
+	@include create-gutter($desktop, $container-desktop-gutter);
+	@include create-gutter(1300, $container-desktop-gutter - 45);
+	@include create-gutter($laptop, $container-laptop-gutter);
+	@include create-gutter(1100, $container-laptop-gutter - 25);
+	@include create-gutter($tablet-large, $container-tablet-large-gutter);
+	@include create-gutter($tablet, $container-tablet-gutter);
+	@include create-gutter($phablet, $container-phablet-gutter);
 }
 
 /* -- Menu Top Calculate -- */
