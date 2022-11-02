@@ -8,12 +8,14 @@ import styles from './What.module.scss';
 const WhatItem: FC<IWhatItem> = ({imgUrl, title, description}) => {
     return (
         <li className={styles.item}>
-            <div className={styles.image}>
-                <Image src={imgUrl} blurDataURL={imgUrl} alt={title} layout="fill" placeholder="blur" />
-            </div>
+            <div className={styles.content}>
+                <div className={styles.image}>
+                    <Image src={imgUrl} blurDataURL={imgUrl} alt={title} layout="fill" placeholder="blur" />
+                </div>
 
-            <h4 className={styles.title}>{title}</h4>
-            <p className={styles.description}>{description}</p>
+                <h4 className={styles.title}>{title}</h4>
+                <p className={styles.description}>{description}</p>
+            </div>
 
             <a href="#consultation" className={styles.button}>Order now</a>
         </li>
