@@ -6,6 +6,10 @@
     width: 100%;
     padding: $header-padding-desktop-gutter 0;
 
+    @include mq($tablet-large) {
+        padding: $header-padding-tablet-large-gutter 0;
+    }
+
     @include mq($tablet) {
         padding: $header-padding-tablet-gutter 0;
     }
