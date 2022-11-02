@@ -19,9 +19,10 @@ const Layout: FC<Props> = ({children}) => {
     
     useEffect(() => {
         dispatch(hideLoader());
-        setHeaderHeight(headerRef.current?.offsetHeight);
 
         window.addEventListener('scroll', () => {
+            setHeaderHeight(headerRef.current?.offsetHeight);
+            
             if(window.scrollY > 0) {
                 setIsSticky(true);
             } else {
