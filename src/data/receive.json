@@ -1,0 +1,29 @@
+{
+    "sectionTitle": "What will the client get?",
+    "list": [
+        {
+            "title": "Design",
+            "description": "We will develop a design according to your preferences, Wishlist and in general according to references",
+            "image": {
+                "url": "/img/home/receive/design.jpg",
+                "alt": "Design"
+            }
+        },
+        {
+            "title": "Quality",
+            "description": "The second name of our company is quality. Every kitchen comes with a lifetime installation warranty",
+            "image": {
+                "url": "/img/home/receive/quality.jpg",
+                "alt": "Quality"
+            }
+        },
+        {
+            "title": "Innovations",
+            "description": "We can do not only in one style, but in all modern styles. We are not afraid of fancy kitchens",
+            "image": {
+                "url": "/img/home/receive/innovations.jpg",
+                "alt": "Innovations"
+            }
+        }
+    ]
+}

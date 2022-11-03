@@ -5,7 +5,8 @@ import Image from 'next/image'
 import Offer from '@components/screens/home/Offer/Offer';
 import What from '@components/screens/home/What/What';
 import Cases from '@components/screens/home/Cases/Cases';
-import Proud from '@components/screens/home/Features/Features';
+import Features from '@components/screens/home/Features/Features';
+import Receive from '@components/screens/home/Receive/Receive';
 
 const Home: NextPage = () => {
   return (
@@ -17,7 +18,8 @@ const Home: NextPage = () => {
       <Offer />
       <What />
       <Cases />
-      <Proud />
+      <Features />
+      <Receive />
     </div>
   )
 }

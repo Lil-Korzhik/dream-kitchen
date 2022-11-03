@@ -16,8 +16,8 @@ const Features: FC = () => {
             <div className="container">
                 <h2 className={styles.section_title}>{sectionTitle}</h2>
                 <ul className={styles.list}>
-                    {list.map(({title, description, image, alt}, index) => (
-                        <FeaturesItem title={title} description={description} image={image} alt={alt} key={index} />
+                    {list.map(({title, description, image}, index) => (
+                        <FeaturesItem title={title} description={description} image={image} key={index} />
                     ))}
                 </ul>
             </div>

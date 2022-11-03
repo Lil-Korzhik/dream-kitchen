@@ -2,7 +2,6 @@ import { FC } from 'react';
 import Image from 'next/image';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper';
 import 'swiper/css';
 
 import casesData from '@data/cases.json';
@@ -10,23 +9,8 @@ import ICases from '@shared/interfaces/Cases/ICases';
 
 import Button from '@components/ui/Button/Button';
 
+import getSwiperOptions from '@helpers/getSwiperOptions';
 import styles from './Cases.module.scss';
-
-const getSwiperOptions = (row: number) => {
-    return {
-        modules: [Autoplay],
-        slidesPerView: 3,
-        spaceBetween: 50,
-        allowTouchMove: false,
-        speed: 10000,
-        loop: true,
-        autoplay: {
-            delay: 0,
-            disableOnInteraction: false,
-            reverseDirection: row % 2 !== 0 ? true : false
-        }
-    }
-}
 
 const Cases: FC = () => {
     const {sectionTitle, button, image, images}: ICases = casesData;
