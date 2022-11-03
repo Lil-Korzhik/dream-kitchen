@@ -1,5 +1,6 @@
-export default interface IProudItem {
+export default interface IFeaturesItem {
     title: string;
     description: string;
     image: string;
+    alt: string;
 }
