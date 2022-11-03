@@ -1,0 +1,20 @@
+{
+    "sectionTitle": "What can we be proud of",
+    "list": [
+        {
+            "title": "High quality",
+            "description": "We supply and install only high quality kitchens. Each product is personally checked before sending",
+            "image": "/img/home/proud/img-1.jpg"
+        },
+        {
+            "title": "Big choice",
+            "description": "Our company has a large selection of all modern kitchens. We will select everything according to your taste",
+            "image": "/img/home/proud/img-2.jpg"
+        },
+        {
+            "title": "Interior preservation",
+            "description": "Before installing the kitchen, we will look at your interior, and we will offer you a kitchen that fits perfectly there",
+            "image": "/img/home/proud/img-3.jpg"
+        }
+    ]
+}

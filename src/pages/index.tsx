@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Offer from '@components/screens/home/Offer/Offer';
 import What from '@components/screens/home/What/What';
 import Cases from '@components/screens/home/Cases/Cases';
+import Proud from '@components/screens/home/Proud/Proud';
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
       <Offer />
       <What />
       <Cases />
+      <Proud />
     </div>
   )
 }
