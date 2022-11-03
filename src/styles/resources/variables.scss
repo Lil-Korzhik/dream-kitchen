@@ -57,4 +57,4 @@ $header-padding-tablet-large-gutter: 15px;
 $header-padding-tablet-gutter: 15px;
 $header-padding-phablet-gutter: 15px;
 
-$section-gutter: 100px;
+$section-gutter: 100px + $header-padding-tablet-gutter * 2;

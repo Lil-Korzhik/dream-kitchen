@@ -28,13 +28,13 @@
     
             {"name": "img-12.jpg", "row": 4},
             {"name": "img-13.jpg", "row": 4},
-            {"name": "img-14.jpg", "row": 4},
-            {"name": "img-15.jpg", "row": 4},
+            {"name": "img-1.jpg", "row": 4},
+            {"name": "img-2.jpg", "row": 4},
     
-            {"name": "img-1.jpg", "row": 5},
-            {"name": "img-2.jpg", "row": 5},
             {"name": "img-3.jpg", "row": 5},
-            {"name": "img-4.jpg", "row": 5}
+            {"name": "img-4.jpg", "row": 5},
+            {"name": "img-5.jpg", "row": 5},
+            {"name": "img-6.jpg", "row": 5}
         ]
     }
 }

@@ -18,6 +18,10 @@ body {
 
 section {
     padding-bottom: $section-gutter;
+
+    @include mq($tablet) {
+        padding-bottom: 60px;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -43,6 +47,14 @@ h1 {
 
 h2 {
     @include font-size($h2-font-size);
+
+    @include mq($tablet) {
+        @include font-size(32px);
+    }
+
+    @include mq($phablet) {
+        @include font-size(28px);
+    }
 }
 
 h3 {

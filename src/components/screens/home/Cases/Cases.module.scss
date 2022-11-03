@@ -1,2 +1,101 @@
 /* ---- Cases ---- */
 @import '@resources';
+
+.section_row {
+    @include flexible();
+    justify-content: space-between;
+
+    @include mq($phablet) {
+        justify-content: center;
+    }
+}
+
+.button {
+    width: rem(200);
+
+    @include mq($phablet) {
+        display: none;
+    }
+}
+
+.button_mobile {
+    display: none;
+    width: 50%;
+    margin: 40px auto 0;
+    
+    @include mq($phablet) {
+        display: block;
+    }
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    margin-top: 30px;
+
+    @include mq($tablet-large) {
+        height: 350px;
+    }
+
+    @include mq($phablet) {
+        height: 320px;
+    }
+}
+
+.images {
+    width: 120%;
+    margin-top: -45vh;
+    margin-left: -5vh;
+    transform: rotate(30deg);
+
+    @include mq($tablet-large) {
+        width: 150%;
+        margin-top: -35vh;
+    }
+
+    @include mq($tablet) {
+        width: 150%;
+        margin-top: -35vh;
+    }
+
+    @include mq($phablet) {
+        width: 233%;
+        margin-top: -20vh;
+        margin-left: -10vh;
+    }
+}
+
+.row {
+    &:not(:last-of-type) {
+        margin-bottom: 30px;
+
+        @include mq($phablet) {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.image {
+    position: relative;
+    width: 100%;
+    height: rem(300);
+
+    &:not(:last-of-type) {
+        padding-right: 50px;
+    }
+
+    @include mq($laptop) {
+        height: rem(240);
+    }
+
+    @include mq($tablet-large) {
+        height: rem(200);
+    }
+
+    @include mq($tablet) {
+        width: 110%;
+        height: rem(180);
+    }
+}
