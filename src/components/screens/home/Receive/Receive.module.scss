@@ -63,6 +63,10 @@
         &:before {@include fade(out)}
         &:after {@include fade(in)}
     }
+
+    @include mq($phablet) {
+        margin-right: 15px;
+    }
 }
 
 .arrows_next {

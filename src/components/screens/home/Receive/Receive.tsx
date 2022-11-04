@@ -12,21 +12,37 @@ const Receive: FC = () => {
     const [activeIndex, setActiveIndex] = useState<number>(0);
 
     const listRef = useRef<HTMLUListElement>(null);
+    const listNode = listRef.current;
+
+    let scrollOptions: ScrollToOptions = {
+        behavior: 'smooth',
+        left: 0
+    }
+
+    const width = listNode?.children[0].clientWidth;
 
     const prev = () => {
         if(activeIndex === 0) {
             setActiveIndex(list.length - 1);
+            scrollOptions.left = 10000;
         } else {
             setActiveIndex(activeIndex - 1);
+            scrollOptions.left = (width ? width + 30 : 0) * -1;
         }
+
+        listNode?.scrollBy(scrollOptions);
     }
 
     const next = () => {
         if(activeIndex + 1 === list.length) {
             setActiveIndex(0);
+            scrollOptions.left = -10000;
         } else {
             setActiveIndex(activeIndex + 1);
+            scrollOptions.left = width ? width + 30 : 0
         }
+
+        listNode?.scrollBy(scrollOptions);
     }
 
     return (
