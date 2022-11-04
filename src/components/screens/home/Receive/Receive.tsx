@@ -1,4 +1,4 @@
-import { FC, useRef, useState } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 
 import receiveData from '@data/receive.json';
 import IReceive from '@shared/interfaces/Receive/IReceive';
@@ -9,17 +9,16 @@ import styles from './Receive.module.scss';
 
 const Receive: FC = () => {
     const {sectionTitle, list}: IReceive = receiveData;
-    const [activeIndex, setActiveIndex] = useState<number>(0);
 
     const listRef = useRef<HTMLUListElement>(null);
     const listNode = listRef.current;
 
+    const [activeIndex, setActiveIndex] = useState<number>(0);
+
     let scrollOptions: ScrollToOptions = {
         behavior: 'smooth',
-        left: 0
+        left: listNode?.children[0].clientWidth + 30
     }
-
-    const width = listNode?.children[0].clientWidth;
 
     const prev = () => {
         if(activeIndex === 0) {
@@ -27,7 +26,7 @@ const Receive: FC = () => {
             scrollOptions.left = 10000;
         } else {
             setActiveIndex(activeIndex - 1);
-            scrollOptions.left = (width ? width + 30 : 0) * -1;
+            scrollOptions.left *= -1;
         }
 
         listNode?.scrollBy(scrollOptions);
@@ -39,7 +38,6 @@ const Receive: FC = () => {
             scrollOptions.left = -10000;
         } else {
             setActiveIndex(activeIndex + 1);
-            scrollOptions.left = width ? width + 30 : 0
         }
 
         listNode?.scrollBy(scrollOptions);
