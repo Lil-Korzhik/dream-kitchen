@@ -14,10 +14,15 @@ const Receive: FC = () => {
     const listNode = listRef.current;
 
     const [activeIndex, setActiveIndex] = useState<number>(0);
+    const [itemWidth, setItemWidth] = useState<number>(0);
+
+    useEffect(() => {
+        setItemWidth(listRef.current.children[0].clientWidth);
+    }, [listRef]);
 
     let scrollOptions: ScrollToOptions = {
         behavior: 'smooth',
-        left: listNode?.children[0].clientWidth + 30
+        left: 0
     }
 
     const prev = () => {
@@ -26,7 +31,7 @@ const Receive: FC = () => {
             scrollOptions.left = 10000;
         } else {
             setActiveIndex(activeIndex - 1);
-            scrollOptions.left *= -1;
+            scrollOptions.left = (itemWidth + 30) * -1;
         }
 
         listNode?.scrollBy(scrollOptions);
@@ -38,6 +43,7 @@ const Receive: FC = () => {
             scrollOptions.left = -10000;
         } else {
             setActiveIndex(activeIndex + 1);
+            scrollOptions.left = itemWidth + 30;
         }
 
         listNode?.scrollBy(scrollOptions);
