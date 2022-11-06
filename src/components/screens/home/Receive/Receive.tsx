@@ -74,8 +74,8 @@ const Receive: FC = () => {
                 <div className={styles.section_row}>
                     <h2 className={styles.section_title}>{sectionTitle}</h2>
                     <div className={styles.arrows}>
-                        <button type="button" className={styles.arrows_prev} onClick={prev}></button>
-                        <button type="button" className={styles.arrows_next} onClick={next}></button>
+                        <button type="button" className={styles.arrows_prev} onClick={prev} aria-label="Previous Item"></button>
+                        <button type="button" className={styles.arrows_next} onClick={next} aria-label="Next Item"></button>
                     </div>
                 </div>
 
