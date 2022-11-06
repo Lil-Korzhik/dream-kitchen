@@ -1,4 +1,5 @@
 import { FC, useEffect, useRef, useState, MouseEvent } from 'react';
+import reverseSign from '@helpers/reverseSign';
 
 import receiveData from '@data/receive.json';
 import IReceive from '@shared/interfaces/Receive/IReceive';
@@ -17,7 +18,7 @@ const Receive: FC = () => {
     const [itemWidth, setItemWidth] = useState<number>(0);
 
     useEffect(() => {
-        setItemWidth(listRef.current.children[0].clientWidth);
+        setItemWidth(listRef.current.children[0].clientWidth + 30);
     }, [listRef]);
 
     let scrollOptions: ScrollToOptions = {
@@ -26,32 +27,44 @@ const Receive: FC = () => {
     }
 
     const prev = () => {
+        const scrollLeft = listNode.scrollLeft;
+
         if(activeIndex === 0) {
+            scrollOptions.left = listNode.clientWidth + 20;
             setActiveIndex(list.length - 1);
-            scrollOptions.left = 10000;
         } else {
+            scrollOptions.left = reverseSign(scrollLeft > itemWidth ? scrollLeft - itemWidth : itemWidth);
             setActiveIndex(activeIndex - 1);
-            scrollOptions.left = (itemWidth + 30) * -1;
         }
 
         listNode?.scrollBy(scrollOptions);
     }
 
     const next = () => {
+        const scrollLeft = listNode.scrollLeft;
+
         if(activeIndex + 1 === list.length) {
+            scrollOptions.left = reverseSign(scrollLeft);
             setActiveIndex(0);
-            scrollOptions.left = -10000;
         } else {
+            scrollOptions.left = itemWidth;
             setActiveIndex(activeIndex + 1);
-            scrollOptions.left = itemWidth + 30;
         }
 
-        listNode?.scrollBy(scrollOptions);
+        listNode.scrollBy(scrollOptions);
     }
 
     const hover = (e: MouseEvent) => {
         const target = (e.target as HTMLLIElement).closest('li');
         const targetIndex = [...listNode.children].indexOf(target);
+
+        const scrollLeft = listNode.scrollLeft;
+        const offsetLeft = target.offsetLeft;
+
+        scrollOptions.left = scrollLeft > offsetLeft ? reverseSign(scrollLeft - offsetLeft) : offsetLeft;
+        scrollOptions.left -= 20;
+        listNode.scrollBy(scrollOptions);
+
         setActiveIndex(targetIndex);
     }
 
@@ -68,7 +81,12 @@ const Receive: FC = () => {
 
                 <ul className={styles.list} ref={listRef}>
                     {list.map(({title, description, image}, index) => (
-                        <ReceiveItem title={title} description={description} image={image} key={index} hover={hover} isActive={activeIndex === index} />
+                        <ReceiveItem title={title} 
+                                     description={description} 
+                                     image={image} 
+                                     isActive={activeIndex === index}
+                                     hover={hover} 
+                                     key={index} />
                     ))}
                 </ul>
             </div>
