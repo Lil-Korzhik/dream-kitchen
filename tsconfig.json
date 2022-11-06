@@ -15,6 +15,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "target": "ES2021",
     "baseUrl": "src/",
     "paths": {
       "@assets/*": ["assets/*"],

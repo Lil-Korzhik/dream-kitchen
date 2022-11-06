@@ -115,7 +115,6 @@
 .item {
     @include transition();
     opacity: 0.5;
-    pointer-events: none;
 }
 
 .title {

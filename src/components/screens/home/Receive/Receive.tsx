@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef, useState } from 'react';
+import { FC, useEffect, useRef, useState, MouseEvent } from 'react';
 
 import receiveData from '@data/receive.json';
 import IReceive from '@shared/interfaces/Receive/IReceive';
@@ -49,6 +49,12 @@ const Receive: FC = () => {
         listNode?.scrollBy(scrollOptions);
     }
 
+    const hover = (e: MouseEvent) => {
+        const target = (e.target as HTMLLIElement).closest('li');
+        const targetIndex = [...listNode.children].indexOf(target);
+        setActiveIndex(targetIndex);
+    }
+
     return (
         <section className={styles.section} id="what-client-receive">
             <div className="container">
@@ -62,7 +68,7 @@ const Receive: FC = () => {
 
                 <ul className={styles.list} ref={listRef}>
                     {list.map(({title, description, image}, index) => (
-                        <ReceiveItem title={title} description={description} image={image} key={index} isActive={activeIndex === index} />
+                        <ReceiveItem title={title} description={description} image={image} key={index} hover={hover} isActive={activeIndex === index} />
                     ))}
                 </ul>
             </div>
