@@ -116,7 +116,7 @@
 /* -- Create Gutter -- */
 @mixin create-gutter($screen-width, $gutter: '') {
 	@if($screen-width == 'default') {
-		width: 1350px;
+		width: $container-default-width;
 		margin: 0 auto;
 	} @else {
 		@include mq($screen-width) {

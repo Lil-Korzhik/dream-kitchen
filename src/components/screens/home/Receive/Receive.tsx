@@ -37,7 +37,7 @@ const Receive: FC = () => {
             setActiveIndex(activeIndex - 1);
         }
 
-        listNode?.scrollBy(scrollOptions);
+        listNode.scrollBy(scrollOptions);
     }
 
     const next = () => {

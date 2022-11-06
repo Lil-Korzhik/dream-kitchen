@@ -30,10 +30,16 @@
 
 .wrapper {
     position: relative;
-    width: 100%;
+    width: $container-default-width;
     height: 600px;
     overflow: hidden;
-    margin-top: 30px;
+    margin: 30px auto 0;
+
+    @include mq(2000) {
+        width: 100%;
+        margin: 0;
+        margin-top: 30px;
+    }
 
     @include mq($tablet-large) {
         height: 350px;
@@ -46,24 +52,28 @@
 
 .images {
     width: 120%;
-    margin-top: -45vh;
-    margin-left: -5vh;
     transform: rotate(30deg);
+    position: absolute;
+    left: 40%;
+    top: 80%;
+    transform: translate(-50%, -50%) rotate(30deg);
+
+    @include mq(2000) {
+        top: 60%;
+    }
 
     @include mq($tablet-large) {
         width: 150%;
-        margin-top: -35vh;
+        left: 56%;
+        top: 115%;
     }
 
     @include mq($tablet) {
         width: 150%;
-        margin-top: -35vh;
     }
 
     @include mq($phablet) {
         width: 233%;
-        margin-top: -20vh;
-        margin-left: -10vh;
     }
 }
 
