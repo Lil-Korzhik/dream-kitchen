@@ -28,10 +28,12 @@ const Header: FC<Props> = ({isSticky, headerRef}) => {
         <header className={`${styles.wrapper} ${isSticky ? styles.sticky : ''}`} id="header" ref={headerRef}>
             <div className="container">
                 <nav className={styles.navigation}>
-                    <Link href='/'>
-                        <a className={styles.logo}>Dream Kitchen</a>
-                    </Link>
-
+                    <span className={styles.logo}>
+                        <Link href='/'>
+                            Dream Kitchen
+                        </Link>
+                        <p className={styles.logo_desc}>Orient LLC</p>
+                    </span>
                     <div className={styles.right}>
                         <Menu place="header" />
                         <Button type="anchor" text={buttonText} href="#consultation" className="theme" customClass={styles.button} />

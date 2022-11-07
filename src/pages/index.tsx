@@ -7,6 +7,7 @@ import What from '@components/screens/home/What/What';
 import Cases from '@components/screens/home/Cases/Cases';
 import Features from '@components/screens/home/Features/Features';
 import Receive from '@components/screens/home/Receive/Receive';
+import Consultation from '@components/screens/home/Consultation/Consultation';
 
 const Home: NextPage = () => {
   return (

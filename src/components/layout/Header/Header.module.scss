@@ -37,8 +37,13 @@
     }
 
     @include mq($phone) {
-        @include font-size(24px);
+        @include font-size(20px);
     }
+}
+
+.logo_desc {
+    font-weight: 400;
+    @include font-size(16px);
 }
 
 .navigation {

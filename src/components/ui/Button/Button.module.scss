@@ -4,6 +4,7 @@
 .default {
     @include transition();
     text-align: center;
+    cursor: pointer;
 
     &:hover,
     &:active {

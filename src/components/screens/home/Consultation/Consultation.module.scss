@@ -1,0 +1,73 @@
+/* ---- Consultation ---- */
+@import '@resources';
+
+.section {
+    color: $white-1;
+    background: $theme-color;
+    padding: 80px 0;
+
+    @include mq($tablet-large) {
+        padding: 40px 0;
+    }
+
+    @include mq($tablet) {
+        padding: 32px 0;
+    }
+}
+
+.wrapper {
+    @include flexible();
+    justify-content: space-between;
+
+    @include mq($tablet) {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+.content {
+    width: 40%;
+
+    @include mq($tablet-large) {
+        width: 45%;
+    }
+
+    @include mq($tablet) {
+        width: 100%;
+    }
+}
+
+.image {
+    position: relative;
+    width: 50%;
+    height: rem(406);
+
+    @include mq($tablet) {
+        width: 100%;
+        height: rem(275);
+        margin-bottom: 32px;
+    }
+}
+
+.title {
+    @include font-size(35px);
+    margin-bottom: 10px;
+}
+
+.description {
+    opacity: 0.7;
+    margin-bottom: 30px;
+}
+
+.input {
+    margin-bottom: 20px;
+
+    &:focus {
+        border-color: $black-1;
+    }
+}
+
+.button {
+    width: 100%;
+    margin-top: 10px;
+}

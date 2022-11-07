@@ -90,11 +90,34 @@ img {
     -ms-user-select: none;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+}
+
 input,
 button {
     font-family: inherit;
     font-weight: inherit;
     font-size: inherit;
+}
+
+input {
+    @include transition();
+    padding: 14px 0 14px 14px;
+    background: $white-1;
+    border: 1px solid $white-1;
+
+    color: $black-1;
+
+    &::placeholder {
+        opacity: 0.7;
+    }
+
+    &:focus {
+        @include transition();
+        border-color: $theme-color;
+    }
 }
 
 /* ---- Scroll ---- */
