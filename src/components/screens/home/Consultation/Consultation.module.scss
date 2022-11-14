@@ -59,12 +59,22 @@
     margin-bottom: 30px;
 }
 
-.input {
+.input_wrapper {
     margin-bottom: 20px;
+}
+
+.input {
+    width: 100%;
+    margin-bottom: 5px;
 
     &:focus {
         border-color: $black-1;
     }
+}
+
+.error {
+    color: $red-color;
+    font-weight: 500;
 }
 
 .button {

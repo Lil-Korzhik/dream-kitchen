@@ -21,6 +21,7 @@ const Home: NextPage = () => {
       <Cases />
       <Features />
       <Receive />
+      <Consultation />
     </div>
   )
 }

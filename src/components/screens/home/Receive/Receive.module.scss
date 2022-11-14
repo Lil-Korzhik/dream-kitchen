@@ -45,6 +45,12 @@
         background: none;
         border-color: rgba(0, 0, 0, 0);
     }
+
+    &[disabled] {
+        @include transition();
+        opacity: 0.5;
+        cursor: default;
+    }
 }
 
 .arrows_prev {
@@ -93,7 +99,7 @@
 
     @include mq($tablet) {
         grid-template-columns: repeat(3, rem(235));
-        overflow-x: scroll;
+        overflow-x: hidden;
 
         &::-webkit-scrollbar {
             display: none;

@@ -14,6 +14,7 @@ body {
     font-weight: $font-weight;
     color: $font-color;
     overflow-x: hidden;
+    padding-right: 0 !important;
 }
 
 section {
@@ -106,7 +107,7 @@ input {
     @include transition();
     padding: 14px 0 14px 14px;
     background: $white-1;
-    border: 1px solid $white-1;
+    border: 2px solid $white-1;
 
     color: $black-1;
 
@@ -117,6 +118,19 @@ input {
     &:focus {
         @include transition();
         border-color: $theme-color;
+    }
+
+    &.wrong {
+        border-color: $red-color;
+    }
+}
+
+button {
+    &[disabled] {
+        @include transition();
+        opacity: 0.5;
+        cursor: default;
+        pointer-events: none;
     }
 }
 
@@ -150,4 +164,19 @@ input {
 
 .lock-scroll {
     overflow: hidden;
+}
+
+/* ---- Other ---- */
+.swal2-styled.swal2-confirm {
+    border-radius: 0 !important;
+    background-color: $theme-color !important;
+}
+
+.swal2-icon.swal2-success .swal2-success-ring {
+    border-color: $theme-color !important;
+}
+
+.swal2-icon.swal2-success [class^=swal2-success-line][class$=long],
+.swal2-icon.swal2-success [class^=swal2-success-line][class$=tip] {
+    background-color: $theme-color !important;
 }
