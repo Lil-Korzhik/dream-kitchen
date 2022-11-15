@@ -1,0 +1,45 @@
+{
+    "sectionTitle": "Reviews",
+    "list": [
+        {   
+            "title": "Sandra H.",
+            "description": "I ordered a kitchen from Dream Kitchen a couple of years ago, until now it perfectly emphasizes the interior and serves. Thank you so much!",
+            "image": {
+                "url": "/img/home/reviews/first-img.jpg",
+                "alt": "Kitchen 1"
+            },
+            "link": "#"
+        },
+        {   
+            "title": "Inna G.",
+            "description": "Yesterday they installed the kitchen, everything has already been arranged and, as for me, it fits perfectly",
+            "image": {
+                "url": "/img/home/reviews/second-img.jpg",
+                "alt": "Kitchen 2"
+            },
+            "link": "#"
+        },
+        {   
+            "title": "Marina B.",
+            "description": "10 years ago I ordered a kitchen, everything still serves perfectly",
+            "image": {
+                "url": "/img/home/reviews/third-img.jpg",
+                "alt": "Kitchen 3"
+            },
+            "link": "#"
+        },
+        {   
+            "title": "Margarett D.",
+            "description": "They just made the kitchen, I didn't even have time to arrange anything, everything looks perfect",
+            "image": {
+                "url": "/img/home/reviews/fourth-img.jpg",
+                "alt": "Kitchen 4"
+            },
+            "link": "#"
+        }
+    ],
+    "button": {
+        "text": "See all reviews",
+        "href": "#"
+    }
+}

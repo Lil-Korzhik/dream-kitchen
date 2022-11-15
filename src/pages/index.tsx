@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import type { GetStaticPropsContext, NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -8,12 +9,9 @@ import Cases from '@components/screens/home/Cases/Cases';
 import Features from '@components/screens/home/Features/Features';
 import Receive from '@components/screens/home/Receive/Receive';
 import Consultation from '@components/screens/home/Consultation/Consultation';
-import { useEffect } from 'react';
+import Guarantees from '@components/screens/home/Guarantees/Guarantees';
 
 const Home: NextPage = ({config}: any) => {
-  useEffect(() => {
-    console.log(process.env.botToken)
-  }, []);
   return (
     <div className="next-page">
       <Head>
@@ -26,6 +24,7 @@ const Home: NextPage = ({config}: any) => {
       <Features />
       <Receive />
       <Consultation />
+      <Guarantees />
     </div>
   )
 }

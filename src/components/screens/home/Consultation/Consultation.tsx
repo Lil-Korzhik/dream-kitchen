@@ -58,12 +58,12 @@ const Consultation: FC = () => {
                         <p className={styles.description}>{description}</p>
 
                         <div className={styles.input_wrapper}>
-                            <input type="text" placeholder="Name" name="name" data-text="Name" data-smile="-" className={styles.input} ref={nameInputRef} onInput={handleChange} />
+                            <input type="text" placeholder="Name" name="name" data-text="Name" data-smile="🧑" className={styles.input} ref={nameInputRef} onInput={handleChange} />
                             <p className={styles.error}>-</p>
                         </div>
 
                         <div className={styles.input_wrapper}>
-                            <input type="tel" placeholder="Phone" name="phone" data-text="Phone" data-smile="-" className={styles.input} ref={phoneInputRef} onInput={handleChange} />
+                            <input type="tel" placeholder="Phone" name="phone" data-text="Phone" data-smile="📞" className={styles.input} ref={phoneInputRef} onInput={handleChange} />
                             <p className={styles.error}>-</p>
                         </div>
 

@@ -1,0 +1,32 @@
+{
+    "sectionTitle": "Guarantees we can offer",
+    "list": [
+        {
+            "title": "Lifetime installation warranty",
+            "description": "We give a lifetime warranty on any product, including kitchen and doors",
+            "icon": {
+                "url": "/img/home/guarantees/hand-icon.svg",
+                "alt": "Hand",
+                "color": "#373EF1"
+            }
+        },
+        {
+            "title": "We have installments",
+            "description": "We give installments for the purchase from our company",
+            "icon": {
+                "url": "/img/home/guarantees/security-icon.svg",
+                "alt": "Security",
+                "color": "#DB9937"
+            }
+        },
+        {
+            "title": "25 year kitchen warranty",
+            "description": "We give a guarantee of up to 25 years for each kitchen",
+            "icon": {
+                "url": "/img/home/guarantees/cert-icon.svg",
+                "alt": "Certificate",
+                "color": "#DB3737"
+            }
+        }
+    ]
+}
