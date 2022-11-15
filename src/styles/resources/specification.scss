@@ -14,6 +14,7 @@ body {
     font-weight: $font-weight;
     color: $font-color;
     overflow-x: hidden;
+    overflow: auto !important;
     padding-right: 0 !important;
 }
 
@@ -164,6 +165,11 @@ button {
 
 .lock-scroll {
     overflow: hidden;
+}
+
+.error_show {
+    @include fade(in);
+    opacity: 1 !important;
 }
 
 /* ---- Other ---- */

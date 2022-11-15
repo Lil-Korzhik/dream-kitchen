@@ -1,4 +1,4 @@
-import IFields from '@shared/interfaces/Consultation/IFields';
+import IFields from '@helpers/tg-request/interfaces/IFields';
 
 const createMessage = (fields: IFields) => {
     let message = '';

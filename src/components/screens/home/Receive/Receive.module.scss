@@ -99,7 +99,8 @@
 
     @include mq($tablet) {
         grid-template-columns: repeat(3, rem(235));
-        overflow-x: hidden;
+        overflow-x: scroll;
+        pointer-events: none;
 
         &::-webkit-scrollbar {
             display: none;

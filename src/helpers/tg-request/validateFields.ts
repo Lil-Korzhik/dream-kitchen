@@ -1,5 +1,6 @@
-import IFields from '@shared/interfaces/Consultation/IFields';
-import clearInputs from './clearInputs';
+import IFields from '@helpers/tg-request/interfaces/IFields';
+import {clearInputs} from './clearInputs';
+import showError from './showError';
 
 const validateFields = (fields: IFields) => {
     let result = true;
@@ -11,8 +12,7 @@ const validateFields = (fields: IFields) => {
 
         if(!field.value || !field.text || !field.smile) {
             if(result !== false) result = false;
-            target.classList.add('wrong');
-            target.nextElementSibling.innerHTML = `Write your ${field.text}`;
+            showError(`Write your ${field.text}`, field.target);
         }
     }
 

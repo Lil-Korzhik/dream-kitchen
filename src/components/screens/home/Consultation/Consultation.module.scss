@@ -26,7 +26,7 @@
 }
 
 .content {
-    width: 40%;
+    width: 45%;
 
     @include mq($tablet-large) {
         width: 45%;
@@ -40,7 +40,7 @@
 .image {
     position: relative;
     width: 50%;
-    height: rem(406);
+    height: rem(450);
 
     @include mq($tablet) {
         width: 100%;
@@ -60,12 +60,11 @@
 }
 
 .input_wrapper {
-    margin-bottom: 20px;
+    margin-bottom: 3px;
 }
 
 .input {
     width: 100%;
-    margin-bottom: 5px;
 
     &:focus {
         border-color: $black-1;
@@ -73,11 +72,11 @@
 }
 
 .error {
+    @include fade(out);
     color: $red-color;
     font-weight: 500;
 }
 
 .button {
     width: 100%;
-    margin-top: 10px;
 }

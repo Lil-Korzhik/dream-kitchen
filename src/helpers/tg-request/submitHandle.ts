@@ -1,5 +1,5 @@
 import { FormEvent } from 'react';
-import IFields from '@shared/interfaces/Consultation/IFields';
+import IFields from '@helpers/tg-request/interfaces/IFields';
 
 import getCurrentDate from '@helpers/getCurrentDate';
 import compareDate from '@helpers/compareDate';

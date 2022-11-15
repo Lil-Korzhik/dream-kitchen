@@ -3,11 +3,11 @@ import Image from 'next/image';
 
 import consultationData from '@data/consultation.json';
 import IConsultation from '@shared/interfaces/Consultation/IConsultation';
-import IFields from '@shared/interfaces/Consultation/IFields';
+import IFields from '@helpers/tg-request/interfaces/IFields';
 
 import Button from '@components/ui/Button/Button';
 
-import clearInputs from '@helpers/tg-request/clearInputs';
+import {clearInput, clearInputs} from '@helpers/tg-request/clearInputs';
 import submitHandle from '@helpers/tg-request/submitHandle';
 import styles from './Consultation.module.scss';
 
@@ -29,8 +29,7 @@ const Consultation: FC = () => {
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         const target = (e.target as HTMLInputElement);
-        target.classList.remove('wrong');
-        target.nextElementSibling.innerHTML = '';
+        clearInput({target});
         
         const {name, value} = target;
         const text = target.dataset.text,
@@ -60,12 +59,12 @@ const Consultation: FC = () => {
 
                         <div className={styles.input_wrapper}>
                             <input type="text" placeholder="Name" name="name" data-text="Name" data-smile="-" className={styles.input} ref={nameInputRef} onInput={handleChange} />
-                            <p className={styles.error}></p>
+                            <p className={styles.error}>-</p>
                         </div>
 
                         <div className={styles.input_wrapper}>
                             <input type="tel" placeholder="Phone" name="phone" data-text="Phone" data-smile="-" className={styles.input} ref={phoneInputRef} onInput={handleChange} />
-                            <p className={styles.error}></p>
+                            <p className={styles.error}>-</p>
                         </div>
 
                         <Button type="submit" text={button.text} className="white_ghost" customClass={styles.button} disabled={isDisabled} />
@@ -73,7 +72,7 @@ const Consultation: FC = () => {
                         <ReCAPTCHA 
                             sitekey={'6LdQVDofAAAAALRegj3qW45OiCuw0AlQeZN-YTRJ'} 
                             style={{marginTop: 20}}
-                            onChange={() => setIsDisabled(false)} />
+                            onChange={() => setIsDisabled(!isDisabled)} />
                     </form>
                 </div>
             </div>
