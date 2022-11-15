@@ -1,5 +1,8 @@
 {
-    "sectionTitle": "Kitchens we've done",
+    "section": {
+        "title": "Kitchen we've done",
+        "id": "cases"
+    },
     "button": {
         "text": "All cases",
         "link": "#"

@@ -22,7 +22,7 @@
         },
         {
             "text": "Contacts",
-            "href": "#contacts",
+            "href": "#consultation",
             "type": "anchor"
         },
         {
@@ -44,7 +44,7 @@
         },
         {
             "text": "What client receive",
-            "href": "#what-client-receive",
+            "href": "#receive",
             "type": "anchor"
         },
         {

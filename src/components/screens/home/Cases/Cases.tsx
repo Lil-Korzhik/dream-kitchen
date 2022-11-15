@@ -13,16 +13,16 @@ import getSwiperOptions from '@helpers/getSwiperOptions';
 import styles from './Cases.module.scss';
 
 const Cases: FC = () => {
-    const {sectionTitle, button, image, images}: ICases = casesData;
+    const {section, button, image, images}: ICases = casesData;
     
     const rowsArray = [];
     for(let i = 0; i < images.rows; i++) rowsArray.push(i + 1);
 
     return (
-        <section className={styles.section} id="cases">
+        <section className={styles.section} id={section.id}>
             <div className="container">
                 <div className={styles.section_row}>
-                    <h2 className={styles.section_title}>{sectionTitle}</h2>
+                    <h2 className={styles.section_title}>{section.title}</h2>
                     <Button type="link" href={button.link} text={button.text} className="theme_ghost" customClass={styles.button} />
                 </div>
             </div>

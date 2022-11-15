@@ -14,7 +14,7 @@ import styles from './Consultation.module.scss';
 import ReCAPTCHA from 'react-google-recaptcha';
 
 const Consultation: FC = () => {
-    const {title, description, button, image}: IConsultation = consultationData;
+    const {section, description, button, image}: IConsultation = consultationData;
     const {url, alt} = image;
 
     const nameInputRef = useRef<HTMLInputElement>(null);
@@ -46,7 +46,7 @@ const Consultation: FC = () => {
     }
 
     return (
-        <section className={styles.section} id="consultation">
+        <section className={styles.section} id={section.id}>
             <div className="container">
                 <div className={styles.wrapper}>
                     <div className={styles.image}>
@@ -54,7 +54,7 @@ const Consultation: FC = () => {
                     </div>
 
                     <form className={styles.content} onSubmit={e => submitHandle(e, fields)}>
-                        <h2 className={styles.title}>{title}</h2>
+                        <h2 className={styles.title}>{section.title}</h2>
                         <p className={styles.description}>{description}</p>
 
                         <div className={styles.input_wrapper}>

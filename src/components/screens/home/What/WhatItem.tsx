@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import Image from 'next/image';
 
-import IWhatItem from '@shared/interfaces/IWhatItem';
+import IWhatItem from '@shared/interfaces/What/IWhatItem';
 
 import styles from './What.module.scss';
 

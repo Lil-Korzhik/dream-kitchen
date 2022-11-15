@@ -7,12 +7,12 @@ import styles from './Guarantees.module.scss';
 import GuaranteesItem from './GuaranteesItem';
 
 const Guarantees: FC = () => {
-    const {sectionTitle, list}: IGuarantees = GuaranteesData;
+    const {section, list}: IGuarantees = GuaranteesData;
 
     return (
-        <section className={styles.section} id="guarantees">
+        <section className={styles.section} id={section.id}>
             <div className="container">
-                <h2 className={styles.section_title}>{sectionTitle}</h2>
+                <h2 className={styles.section_title}>{section.title}</h2>
 
                 <ul className={styles.list}>
                     {list.map(({icon, title, description}, index) => (

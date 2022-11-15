@@ -1,5 +1,8 @@
 {
-    "sectionTitle": "What will the client get?",
+    "section": {
+        "title": "What will the client get?",
+        "id": "receive"
+    },
     "list": [
         {
             "title": "Design",

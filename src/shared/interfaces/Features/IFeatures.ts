@@ -1,6 +1,7 @@
+import ISection from '../ISection';
 import IFeaturesItem from './IFeaturesItem';
 
 export default interface IFeatures {
-    sectionTitle: string;
+    section: ISection;
     list: IFeaturesItem[];
 }

@@ -1,5 +1,8 @@
 {
-    "sectionTitle": "What we offer",
+    "section": {
+        "title": "What we offer",
+        "id": "what-we-offer"
+    },
     "list": [
         {
             "imgUrl": "/img/home/what/wooden-kitchens.jpg",

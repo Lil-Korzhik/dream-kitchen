@@ -1,5 +1,8 @@
 {
-    "sectionTitle": "Reviews",
+    "section": {
+        "title": "Reviews",
+        "id": "reviews"
+    },
     "list": [
         {   
             "title": "Sandra H.",

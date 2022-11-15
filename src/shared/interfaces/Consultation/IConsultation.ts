@@ -1,9 +1,10 @@
+import ISection from '../ISection';
 import IConsultationButton from './IConsultationButton';
 import IConsultationImage from './IConsultationImage';
 
 export default interface IConsultation {
-    title: string;
+    section: ISection;
     description: string;
-    button: IConsultationButton,
-    image: IConsultationImage
+    button: IConsultationButton;
+    image: IConsultationImage;
 }

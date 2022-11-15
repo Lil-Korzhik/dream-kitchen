@@ -1,5 +1,8 @@
 {
-    "sectionTitle": "What can we be proud of",
+    "section": {
+        "title": "What can we be proud of",
+        "id": "features"
+    },
     "list": [
         {
             "title": "High quality",

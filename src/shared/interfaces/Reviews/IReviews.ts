@@ -1,8 +1,9 @@
+import ISection from '../ISection';
 import IReviewsItem from './IReviewsItem';
 import IReviewsButton from './IReviewsButton';
 
 export default interface IReviews {
-    sectionTitle: string;
+    section: ISection;
     list: IReviewsItem[],
     button: IReviewsButton
 }

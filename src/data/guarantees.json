@@ -1,5 +1,8 @@
 {
-    "sectionTitle": "Guarantees we can offer",
+    "section": {
+        "title": "Guarantees we can offer",
+        "id": "guarantees"
+    },
     "list": [
         {
             "title": "Lifetime installation warranty",

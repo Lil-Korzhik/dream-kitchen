@@ -1,6 +1,7 @@
+import ISection from '../ISection';
 import IReceiveItem from './IReceiveItem';
 
 export default interface IReceive {
-    sectionTitle: string;
+    section: ISection;
     list: IReceiveItem[]
 }

@@ -8,7 +8,7 @@ import Button from '@components/ui/Button/Button';
 import ReviewsItem from './ReviewsItem';
 
 const Reviews: FC = () => {
-    const {sectionTitle, list, button}: IReviews = ReviewsData;
+    const {section, list, button}: IReviews = ReviewsData;
     const listFilter = list.filter((item, index) => index <= 3);
 
     const buttonOptions = {
@@ -18,10 +18,10 @@ const Reviews: FC = () => {
     }
 
     return (
-        <section className={styles.section} id="reviews">
+        <section className={styles.section} id={section.id}>
             <div className="container">
                 <div className={styles.section_row}>
-                    <h2 className={styles.section_title}>{sectionTitle}</h2>
+                    <h2 className={styles.section_title}>{section.title}</h2>
                     <Button type="link" {...buttonOptions} customClass={styles.section_button} />
                 </div>
 
