@@ -9,7 +9,7 @@ import hexToRGBA from '@helpers/hexToRGBA';
 
 const GuaranteesItem: FC<IGuaranteesItem> = ({icon, title, description}) => {
     const {url, alt, color}: IGuaranteesIcon = icon;
-    console.log(color)
+
     return (
         <li className={styles.item}>
             <div className={styles.icon_wrapper} style={{borderColor: hexToRGBA(color, 0.2)}}>

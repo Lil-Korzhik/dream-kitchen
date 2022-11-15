@@ -1,0 +1,106 @@
+/* ---- Reviews ---- */
+@import '@resources';
+
+.section {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.section_row {
+    @include flexible();
+    justify-content: space-between;
+
+    @include mq($tablet) {
+        justify-content: center;
+    }
+}
+
+.section_title {
+    @include font-size(32px);
+    font-weight: 500;
+}
+
+.section_button {
+    width: rem(195);
+
+    @include mq($tablet) {
+        display: none;
+    }
+}
+
+.section_button_mobile {
+    display: none;
+    width: rem(195);
+    margin: 40px auto 0;
+
+    @include mq($tablet) {
+        display: block;
+    }
+}
+
+.list {
+    @include font-size(14px);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+
+    @include mq($tablet-large) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mq($tablet) {
+        grid-template-columns: repeat(4, rem(235));
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #F7F7F7;
+
+    @include mq($tablet-large) {
+        &:nth-child(4) {
+            display: none;
+        }
+    }
+
+    @include mq($tablet) {
+        &:nth-child(4) {
+            display: block;
+        }
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.image {
+    position: relative;
+    width: 100%;
+    height: rem(120);
+}
+
+.description {
+    opacity: 0.4;
+    margin-top: 5px;
+}
+
+.link {
+    @include transition();
+    color: $theme-color;
+    margin-top: 33px;
+    padding: 0 0 20px 20px;
+
+    &:hover { @include link-hover(); }
+}

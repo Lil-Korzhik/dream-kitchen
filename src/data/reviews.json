@@ -8,7 +8,7 @@
                 "url": "/img/home/reviews/first-img.jpg",
                 "alt": "Kitchen 1"
             },
-            "link": "#"
+            "href": "#"
         },
         {   
             "title": "Inna G.",
@@ -17,7 +17,7 @@
                 "url": "/img/home/reviews/second-img.jpg",
                 "alt": "Kitchen 2"
             },
-            "link": "#"
+            "href": "#"
         },
         {   
             "title": "Marina B.",
@@ -26,7 +26,7 @@
                 "url": "/img/home/reviews/third-img.jpg",
                 "alt": "Kitchen 3"
             },
-            "link": "#"
+            "href": "#"
         },
         {   
             "title": "Margarett D.",
@@ -35,7 +35,16 @@
                 "url": "/img/home/reviews/fourth-img.jpg",
                 "alt": "Kitchen 4"
             },
-            "link": "#"
+            "href": "#"
+        },
+        {   
+            "title": "Margarett D..",
+            "description": "They just made the kitchen, I didn't even have time to arrange anything, everything looks perfect",
+            "image": {
+                "url": "/img/home/reviews/fourth-img.jpg",
+                "alt": "Kitchen 4"
+            },
+            "href": "#"
         }
     ],
     "button": {

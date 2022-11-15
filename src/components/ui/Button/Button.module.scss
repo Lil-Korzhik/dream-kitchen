@@ -3,6 +3,7 @@
 
 .default {
     @include transition();
+    font-family: 'Jost', sans-serif !important;
     text-align: center;
     cursor: pointer;
 
