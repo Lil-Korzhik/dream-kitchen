@@ -5,6 +5,7 @@ import Menu from '@components/ui/Menu/Menu';
 import Button from '@components/ui/Button/Button';
 import useWindowSize from '@hooks/useWindowSize';
 
+import anchorClick from '@helpers/anchorClick';
 import styles from './Header.module.scss';
 
 type Props = {
@@ -29,9 +30,9 @@ const Header: FC<Props> = ({isSticky, headerRef}) => {
             <div className="container">
                 <nav className={styles.navigation}>
                     <span className={styles.logo}>
-                        <Link href='/'>
+                        <a href="#offer" onClick={anchorClick}>
                             Dream Kitchen
-                        </Link>
+                        </a>
                         <p className={styles.logo_desc}>Orient LLC</p>
                     </span>
                     <div className={styles.right}>

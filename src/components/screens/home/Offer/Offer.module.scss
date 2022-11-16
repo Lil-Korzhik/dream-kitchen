@@ -84,6 +84,7 @@
 
 .image {
     @include transition();
+    will-change: transform;
 
     &:hover {
         @include transition();
