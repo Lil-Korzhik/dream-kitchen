@@ -13,7 +13,7 @@ import Guarantees from '@screens/home/Guarantees/Guarantees';
 import Reviews from '@screens/home/Reviews/Reviews';
 import Info from '@screens/home/Info/Info';
 import Faq from '@screens/home/Faq/Faq';
-import Location from '@screens/home/Location/Location';
+import Map from '@components/screens/home/Map/Map';
 
 const Home: NextPage = () => {
   return (
@@ -33,7 +33,7 @@ const Home: NextPage = () => {
       <Info />
       <Faq />
       <Consultation />
-      <Location />
+      <Map />
     </div>
   )
 }

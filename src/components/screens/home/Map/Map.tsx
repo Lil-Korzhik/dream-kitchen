@@ -1,9 +1,9 @@
 import { FC, useEffect, useState } from 'react';
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
 import config from '@config';
-import styles from './Location.module.scss';
+import styles from './Map.module.scss';
 
-const Location = () => {
+const Map = () => {
     const [mapHeight, setMapHeight] = useState<number>(400);
 
     const containerStyle = {
@@ -31,4 +31,4 @@ const Location = () => {
     );
 }
 
-export default Location;
+export default Map;
