@@ -31,6 +31,7 @@ const Home: NextPage = ({config}: any) => {
       <Reviews />
       <Info />
       <Faq />
+      <Consultation />
     </div>
   )
 }

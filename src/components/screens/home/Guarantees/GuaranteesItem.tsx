@@ -14,7 +14,7 @@ const GuaranteesItem: FC<IGuaranteesItem> = ({icon, title, description}) => {
         <li className={styles.item}>
             <div className={styles.icon_wrapper} style={{borderColor: hexToRGBA(color, 0.2)}}>
                 <div className={styles.icon} style={{backgroundColor: hexToRGBA(color, 0.4)}}>
-                    <Image src={url} blurDataURL={url} alt={alt} width={24} height={24} placeholder="blur" />
+                    <Image src={url} alt={alt} width={24} height={24} />
                 </div>
             </div>
 
