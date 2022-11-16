@@ -11,6 +11,7 @@ import Receive from '@components/screens/home/Receive/Receive';
 import Consultation from '@components/screens/home/Consultation/Consultation';
 import Guarantees from '@components/screens/home/Guarantees/Guarantees';
 import Reviews from '@components/screens/home/Reviews/Reviews';
+import Info from '@components/screens/home/Info/Info';
 
 const Home: NextPage = ({config}: any) => {
   return (
@@ -27,6 +28,7 @@ const Home: NextPage = ({config}: any) => {
       <Consultation />
       <Guarantees />
       <Reviews />
+      <Info />
     </div>
   )
 }

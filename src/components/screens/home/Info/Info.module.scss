@@ -1,0 +1,44 @@
+/* ---- Info ---- */
+@import '@resources';
+
+.section {
+    font-family: 'Jost', sans-serif;
+    background: $gray-1;
+    padding: 52px 0;
+
+    @include mq($tablet) {
+        padding: 40px 0;
+    }
+
+    @include mq($phablet) {
+        padding: 25px 0;
+    }
+}
+
+.list {
+    @include flexible();
+    justify-content: space-around;
+}
+
+.item {
+    text-align: center;
+}
+
+.title {
+    @include font-size(36px);
+    font-weight: 500;
+
+    @include mq($phablet) {
+        @include font-size(24px);
+    }
+}
+
+.description {
+    @include font-size(24px);
+    opacity: 0.4;
+    margin-top: 10px;
+
+    @include mq($phablet) {
+        @include font-size(16px);
+    }
+}
