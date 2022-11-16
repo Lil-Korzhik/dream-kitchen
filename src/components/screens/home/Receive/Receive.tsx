@@ -16,7 +16,7 @@ type ClicksType = {
 }
 
 const Receive: FC = () => {
-    const {sectionTitle, list}: IReceive = receiveData;
+    const {section, list}: IReceive = receiveData;
 
     const listRef = useRef<HTMLUListElement>(null);
     const listNode = listRef.current;
@@ -93,10 +93,10 @@ const Receive: FC = () => {
     }
 
     return (
-        <section className={styles.section} id="what-client-receive">
+        <section className={styles.section} id={section.id}>
             <div className="container">
                 <div className={styles.section_row}>
-                    <h2 className={styles.section_title}>{sectionTitle}</h2>
+                    <h2 className={styles.section_title}>{section.title}</h2>
                     <div className={styles.arrows}>
                         <button type="button" className={styles.arrows_prev} onClick={prev} disabled={!clicks.prev} aria-label="Previous Item"></button>
                         <button type="button" className={styles.arrows_next} onClick={next} disabled={!clicks.next} aria-label="Next Item"></button>
