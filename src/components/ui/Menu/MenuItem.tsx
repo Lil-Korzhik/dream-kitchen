@@ -11,6 +11,11 @@ interface Props extends IMenuItem {
 }
 
 const MenuItem: FC<Props> = ({text, href, type, toggleMenu}) => {
+    const anchorHandleClick = (e: MouseEvent<HTMLAnchorElement>) => {
+        if(window.screen.width < 993) toggleMenu();
+        anchorClick(e);
+    }
+
     return (
         <li className={styles.item}>
             {type === 'link' &&
@@ -19,7 +24,7 @@ const MenuItem: FC<Props> = ({text, href, type, toggleMenu}) => {
             </Link>}
 
             {type === 'anchor' &&
-            <a href={href} className={styles.link} onClick={anchorClick}>
+            <a href={href} className={styles.link} onClick={anchorHandleClick}>
                 {text}
             </a>}
         </li>
