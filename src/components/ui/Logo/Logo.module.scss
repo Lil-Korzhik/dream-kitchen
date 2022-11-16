@@ -1,0 +1,25 @@
+/* ---- Logo ---- */
+@import '@resources';
+
+.wrapper {
+    @include transition();
+    display: inline-block;
+
+    &:hover {
+        @include link-hover();
+    }
+}
+
+.title {
+    @include font-size(28px);
+    font-weight: 500;
+
+    @include mq($phone) {
+        @include font-size(20px);
+    }
+}
+
+.description {
+    @include font-size(16px);
+    font-weight: 400;
+}

@@ -91,6 +91,38 @@
             }
         }
     }
+
+    &_footer {
+        display: grid;
+        grid-template-columns: repeat(2, 200px);
+        column-gap: 112px;
+        margin-top: 28px;
+
+        & .link {
+            @include font-size(18px);
+            @include transition();
+            font-weight: 400;
+            color: $black-2;
+            opacity: 0.4;
+
+            &:hover {
+                @include transition();
+                opacity: 1;
+            }
+        }
+
+        & .item {
+            margin-bottom: 10px;
+        }
+
+        @include mq($tablet-large) {
+            column-gap: 10%;
+        }
+
+        @include mq($tablet) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
 }
 
 .show {

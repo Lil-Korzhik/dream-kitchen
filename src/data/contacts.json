@@ -1,0 +1,32 @@
+{
+    "place": "Hollywood",
+    "phone": "(612) - 459 - 3533",
+    "text": "Developed by Nik Korz",
+    "link": {
+        "text": "Privacy Policy",
+        "href": "#"
+    },
+    "socials": [
+        {
+            "href": "#",
+            "image": {
+                "url": "/img/layout/footer/socials/instagram-icon.svg",
+                "alt": "Instagram"
+            }
+        },
+        {
+            "href": "#",
+            "image": {
+                "url": "/img/layout/footer/socials/tiktok-icon.svg",
+                "alt": "TikTok"
+            }
+        },
+        {
+            "href": "#",
+            "image": {
+                "url": "/img/layout/footer/socials/facebook-icon.svg",
+                "alt": "FaceBook"
+            }
+        }
+    ]
+}

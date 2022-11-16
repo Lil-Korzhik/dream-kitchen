@@ -27,25 +27,6 @@
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 
-.logo {
-    @include transition();
-    @include font-size(28px);
-    font-weight: 500;
-
-    &:hover {
-        @include link-hover();
-    }
-
-    @include mq($phone) {
-        @include font-size(20px);
-    }
-}
-
-.logo_desc {
-    font-weight: 400;
-    @include font-size(16px);
-}
-
 .navigation {
     @include flexible();
     justify-content: space-between;
