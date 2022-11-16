@@ -81,3 +81,13 @@
     align-items: flex-end;
     row-gap: 10px;
 }
+
+.image {
+    @include transition();
+
+    &:hover {
+        @include transition();
+
+        transform: scale(0.95);
+    }
+}
