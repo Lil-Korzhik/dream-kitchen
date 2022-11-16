@@ -1,0 +1,10 @@
+/* ---- Location ---- */
+@import '@resources';
+
+.section {
+    padding: 100px 0;
+
+    @include mq($tablet) {
+        padding: 60px 0;
+    }
+}
