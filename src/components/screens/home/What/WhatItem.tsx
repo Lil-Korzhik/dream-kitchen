@@ -3,6 +3,7 @@ import Image from 'next/image';
 
 import IWhatItem from '@shared/interfaces/What/IWhatItem';
 
+import anchorClick from '@helpers/anchorClick';
 import styles from './What.module.scss';
 
 const WhatItem: FC<IWhatItem> = ({imgUrl, title, description}) => {
@@ -17,7 +18,7 @@ const WhatItem: FC<IWhatItem> = ({imgUrl, title, description}) => {
                 <p className={styles.description}>{description}</p>
             </div>
 
-            <a href="#consultation" className={styles.button}>Order now</a>
+            <a href="#consultation" className={styles.button} onClick={anchorClick}>Order now</a>
         </li>
     );
 }

@@ -1,6 +1,6 @@
-import { FC, MouseEventHandler } from 'react';
+import { FC, MouseEvent, MouseEventHandler } from 'react';
 import Link from 'next/link';
-
+import anchorClick from '@helpers/anchorClick';
 import styles from './Button.module.scss';
 
 type Props = {
@@ -29,7 +29,7 @@ const Button: FC<Props> = ({type, className = '', text, href = '#', handleClick,
             </button>}
 
             {type === 'anchor' &&
-            <a href={href} className={style}>
+            <a href={href} className={style} onClick={anchorClick}>
                 {text}
             </a>}
             
