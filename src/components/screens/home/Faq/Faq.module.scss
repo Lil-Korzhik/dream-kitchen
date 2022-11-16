@@ -1,0 +1,136 @@
+/* ---- Faq ---- */
+@import '@resources';
+
+.section {
+    padding-top: 100px;
+
+    @include mq($tablet) {
+        padding-top: 60px;
+    }
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @include mq($tablet-large) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.content {
+    max-width: 40%;
+
+    @include mq($tablet-large) {
+        text-align: center;
+        max-width: 90%;
+        margin-bottom: 36px;
+    }
+}
+
+.title {
+    @include font-size(36px);
+
+    @include mq($phablet) {
+        @include font-size(24px);
+    }
+}
+
+.title_color {
+    color: $theme-color;
+}
+
+.description {
+    opacity: 0.4;
+    margin-top: 20px;
+
+    @include mq($phablet) {
+        @include font-size(16px);
+    }
+}
+
+.list {
+    width: 50%;
+
+    @include mq($tablet-large) {
+        width: 90%;
+    }
+}
+
+.item {
+    padding-bottom: 17px;
+    border-bottom: 2px solid $black-1;
+    border-bottom-color: rgba($black-1, 0.05);
+
+    &:not(:last-of-type) {
+        margin-bottom: 30px;
+    }
+}
+
+.button {
+    @include flexible();
+    @include transition();
+    width: 100%;
+    justify-content: space-between;
+    background: none;
+    padding: 0;
+
+    &:after {
+        content: '';
+        display: block;
+        width: 32px;
+        height: 32px;
+        @include background('/img/home/faq/arrow-icon.svg');
+        @include transition();
+
+        @include mq($phablet) {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &:hover {
+        @include link-hover();
+        cursor: pointer;
+    }
+}
+
+.button_active {
+    &:after {
+        transform: rotate(180deg);
+    }
+}
+
+.question {
+    @include font-size(24px);
+    font-weight: 500;
+    color: $black-1;
+    width: 90%;
+    text-align: left;
+
+    @include mq($phablet) {
+        @include font-size(18px);
+    }
+}
+
+.answer_wrapper {
+    height: 0;
+    overflow: hidden;
+    transition: height ease $transition-delay;
+    margin-top: 13px;
+}
+
+.answer {
+    @include font-size(16px);
+    opacity: 0.4;
+
+    @include mq($phablet) {
+        @include font-size(14px);
+    }
+}
+
+.open {
+    height: auto;
+}

@@ -1,0 +1,36 @@
+{
+    "section": {
+        "title": {
+            "text": "Frequently asked",
+            "color": "questions"
+        },
+        "description": "We have collected the most frequent questions from our clients that arise at the start of work. If you have other questions, contact us - we will tell you and show you.",
+        "id": "faq"
+    },
+    "list": [
+        {
+            "question": "Question 1",
+            "answer": "Answer 1"
+        },
+        {
+            "question": "The long question, that you can have on your company",
+            "answer": "Long Answer"
+        },
+        {
+            "question": "Question 2",
+            "answer": "Answer 2"
+        },
+        {
+            "question": "Question 3",
+            "answer": "Answer 3"
+        },
+        {
+            "question": "Question 4",
+            "answer": "Answer 4"
+        },
+        {
+            "question": "Question 5",
+            "answer": "Answer 5"
+        }
+    ]
+}

@@ -12,6 +12,7 @@ import Consultation from '@components/screens/home/Consultation/Consultation';
 import Guarantees from '@components/screens/home/Guarantees/Guarantees';
 import Reviews from '@components/screens/home/Reviews/Reviews';
 import Info from '@components/screens/home/Info/Info';
+import Faq from '@components/screens/home/Faq/Faq';
 
 const Home: NextPage = ({config}: any) => {
   return (
@@ -29,6 +30,7 @@ const Home: NextPage = ({config}: any) => {
       <Guarantees />
       <Reviews />
       <Info />
+      <Faq />
     </div>
   )
 }

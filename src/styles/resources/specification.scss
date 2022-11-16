@@ -4,6 +4,10 @@
     outline: none;
     border: none;
     scroll-margin-top: $section-gutter;
+
+    @include mq($phablet) {
+        scroll-margin-top: 100px;
+    }
 }
 
 body {

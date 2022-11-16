@@ -40,7 +40,7 @@
 .image {
     position: relative;
     width: 50%;
-    height: rem(450);
+    height: rem(600);
 
     @include mq($tablet) {
         width: 100%;
@@ -60,7 +60,7 @@
 }
 
 .input_wrapper {
-    margin-bottom: 3px;
+    margin-bottom: 5px;
 }
 
 .input {
@@ -79,4 +79,5 @@
 
 .button {
     width: 100%;
+    margin-top: 3px;
 }
